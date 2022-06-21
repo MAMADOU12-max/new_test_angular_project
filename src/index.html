@@ -1,13 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AngularSlick</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>AngularSlick</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
 </head>
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et velit veniam consequuntur? </p>
+
+  
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick/dist/slick.js"></script>
+
+    <script>
+      $gl.slick({
+  rows: 0,
+  slidesToShow: 2,
+  arrows: false,
+  draggable: false,
+  useTransform: false,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+        vertical: true
+      }
+    }
+  ]
+});
+ 
+$gl2.slick({
+  rows: 0,
+  useTransform: false,
+  prevArrow: ".arrow-left",
+  nextArrow: ".arrow-right",
+  fade: true,
+  asNavFor: $gl
+});
+    </script>
 </body>
 </html>
